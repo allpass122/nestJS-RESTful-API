@@ -13,8 +13,7 @@ yarn install 後還是少 package
 
 # Run
 
-under dir: restful_api
-`yarn start:dev`
+under dir: restful_api, `yarn start: dev`
 
 # Test
 
