@@ -9,6 +9,13 @@ yarn install 後還是少 package
 > npm install class-validator
 > 如果還有缺什麼就裝什麼！！！
 
+對沒錯！我一開始用 yarn 裝不好最後用 npm 才過，所以變混用了．
+
+# Run
+
+under dir: restful_api
+`yarn start:dev`
+
 # Test
 
 I use `postman` to test my api.
