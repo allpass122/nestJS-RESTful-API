@@ -13,39 +13,39 @@ import { CreateUserDto } from './createUser.dto';
 import { QueryByNameOrEmailDto } from './queryByNameOrEmail.dto';
 import { UserService } from './user.service';
 
-@Controller('api')
+@Controller('/api')
 export class UserController {
   constructor(private readonly userService: UserService) {}
 
+  // requirements 1
   @Post()
   createUser(@Body() createUser: CreateUserDto) {
-    // requirements 1
     // console.log(`createUser`);
     return this.userService.createUser(createUser);
   }
 
+  // requirements 2
   @Get(':id')
   getUserById(@Param('id') id: number): string {
-    // requirements 2
     return this.userService.getUserById(id);
   }
 
+  // requirements 3
   @Get()
   queryByNameOrEmail(@Query() query: QueryByNameOrEmailDto) {
-    // requirements 3
-    console.log(`query`);
+    // console.log(`query`);
     return this.userService.queryByNameOrEmail(query);
   }
 
+  // requirements 4
   @Put(':id')
-  update(@Param('id') id: number, @Body() update: CreateUserDto) {
-    // requirements 4
+  userEdit(@Param('id') id: number, @Body() update: CreateUserDto) {
     return this.userService.userEdit(id, update);
   }
 
+  // requirements 5
   @Delete(':id')
-  remove(@Param('id') id: number) {
-    // requirements 5
+  userDelete(@Param('id') id: number) {
     return this.userService.userDelete(id);
   }
 }
